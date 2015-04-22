@@ -3,12 +3,14 @@
 class Posts extends CI_Controller {
   public function index()
   {
+    $data['posts']=$this->Post->all();
     $this->load->view('posts/index', $data);
   }
 
   public function show($id)
   {
-    $this->load->view('posts/show');
+    $data['post'] = $this->Post->find_by($id);
+    $this->load->view('posts/show', $data);
   }
 
   public function new_post()
@@ -18,21 +20,27 @@ class Posts extends CI_Controller {
 
   public function create()
   {
-
+    $post=$this->input->post();
+    $this->Post->create($post);
+    redirect('/');
   }
 
   public function edit($id)
   {
-    $this->load->view('posts/edit');
+    $data['post'] = $this->Post->find_by($id);
+    $this->load->view('posts/edit',$data);
   }
 
   public function update($id)
   {
-
+    $post = $this->input->post();
+    $this->Post->update($post, $id);
+    redirect('/posts/show/' .$id);
   }
 
   public function destroy($id)
   {
-
+    $this->Post->delete_item($id);
+    redirect('/');
   }
 }
