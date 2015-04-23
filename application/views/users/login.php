@@ -37,17 +37,17 @@
        <div class="col-md-4 col-md-offset-4">
          <h2 class="page-header">Log In</h2>
          <div class="well bs-component">
-           <form action="#" method="post">
+           <form action="/users/login" method="post">
              <div class="form-group">
-               <input class="form-control" type="text" placeholder="Email or username">
+               <input name="email" class="form-control" type="text" placeholder="Email or username">
              </div>
              <div class="form-group">
-              <input class="form-control" type="password" placeholder="Password">
+              <input name="password" class="form-control" type="password" placeholder="Password">
              </div>
              <input class="btn btn-default" type="submit" value="Sign in">
            </form>
          </div>
-         <a class="pull-right" href="registration.html">Create a new account</a>
+         <a class="pull-right" href="registration.html">Creat a new account</a>
        </div>
      </div>
    </div>

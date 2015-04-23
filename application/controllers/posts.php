@@ -3,12 +3,14 @@
 class Posts extends CI_Controller {
   public function index()
   {
+    $this->load->model('Post');
     $data['posts']=$this->Post->all();
     $this->load->view('posts/index', $data);
   }
 
   public function show($id)
   {
+    $this->load->model('Post');
     $data['post'] = $this->Post->find_by($id);
     $this->load->view('posts/show', $data);
   }

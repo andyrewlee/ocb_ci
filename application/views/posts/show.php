@@ -41,7 +41,7 @@
     <div class="col-md-2"></div>
     <div class="col-md-8">
       <div class="main-content">
-        <p>Post content. Blah blah blah blah. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+        <p><?= $post['content'] ?></p>
         <a href="edit_post.html" class="btn btn-primary btn-xs">Edit</a>
       </div>
     <div class="col-md-2"></div>

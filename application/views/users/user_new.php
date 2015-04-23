@@ -37,20 +37,20 @@
        <div class="col-md-4 col-md-offset-4">
          <h2 class="page-header">Registration</h2>
          <div class="well bs-component">
-           <form action="#" method="post">
+           <form action="/users/create" method="post">
              <div class="form-group">
-               <input class="form-control" type="text" placeholder="Email or username">
+               <input name="email" class="form-control" type="text" placeholder="Email or username">
              </div>
              <div class="form-group">
-               <input class="form-control" type="password" placeholder="Password">
+               <input name="password" class="form-control" type="password" placeholder="Password">
              </div>
              <div class="form-group">
-               <input class="form-control" type="password" placeholder="Confirm Password">
+               <input name="password_confirmation" class="form-control" type="password" placeholder="Confirm Password">
              </div>
              <input class="btn btn-default" type="submit" value="Join">
            </form>
          </div>
-         <a class="pull-right" href="signin.html">Already have account?</a>
+         <a class="pull-right" href="/users/login_page">Already have account?</a>
        </div>
      </div>
    </div>

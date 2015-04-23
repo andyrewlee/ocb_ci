@@ -34,48 +34,18 @@
    <div class="container">
      <div class="row">
        <div class="col-sm-8">
-         <div class="row post">
-           <div class="col-md-4">
-             <img class="img-responsive" src="http://lorempixel.com/300/300">
-           </div>
-           <div class="col-md-8">
-             <div class="page-header">
-               <h1>This is a cool header</h1>
-             </div>
-             <p>
-             Hello this is a blog that is really cool.Hello this is a blog that is really cool.HHHHHello this is a blog that is really cool.
-             </p>
-             <button class="btn">Read More</button>
-           </div>
-         </div>
-         <div class="row post">
-           <div class="col-md-4">
-             <img class="img-responsive" src="http://lorempixel.com/301/301">
-           </div>
-           <div class="col-md-8">
-             <div class="page-header">
-               <h1>This is a cool header</h1>
-             </div>
-             <p>
-             Hello this is a blog that is really cool.Hello this is a blog that is really cool.HHHHHello this is a blog that is really cool.
-             </p>
-             <button class="btn">Read More</button>
-           </div>
-         </div>
-         <div class="row post">
-           <div class="col-md-4">
-             <img class="img-responsive" src="http://lorempixel.com/302/302">
-           </div>
-           <div class="col-md-8">
-             <div class="page-header">
-               <h1>This is a cool header</h1>
-             </div>
-             <p>
-             Hello this is a blog that is really cool.Hello this is a blog that is really cool.HHHHHello this is a blog that is really cool.
-             </p>
-             <button class="btn">Read More</button>
-           </div>
-         </div>
+<?php
+        foreach($posts as $post)
+        { ?>
+          <div class="row post">
+            <div class="col-md-4">
+              <img class="img-responsive" src="http://lorempixel.com/300/300">
+            </div>
+            <p><?= $post['content'] ?></p>
+            <a class="btn" href="/posts/show/<?= $post['id']?>">Read More</a>
+          </div>
+<?php
+        } ?>
        </div>
        <div class="col-sm-4">
          <div class="well bs-component">
